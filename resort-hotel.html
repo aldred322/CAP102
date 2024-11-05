@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resorts & Hotels</title>
+    <link rel="stylesheet" type="text/css" href="css/r&h.css">
+</head>
+<body>
+	<div class="main">
+		<ul>
+			<ul class="list">
+			<li class="logo"><a href="mainPage.html"><img src="earth-globe.png" alt="Logo" style="width: 45px; height: 45px;"></a></li>
+			<div class="search">
+                <form method="POST" action="info.php">
+                  <input type="text" name="search_p" placeholder="Search.." size="50">
+              
+                  <input type="image" name="submit_p" src="search_icon.png" alt="Search image" style="width:22;height:22; margin-left: 40px;">
+                </form>
+            </div>
+			</ul>
+			<ul class="list2">
+			<li><a href="mainPage.html">Home</a></li>
+			<li><a id="long" href="destination.html">Destination</a></li>
+            <li><a href="resort-hotel.html">Resorts & Hotels</a></li>
+			<li><a href="booking.html">Booking</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="index.html">Logout</a></li>
+			</ul>
+		</ul>
+	</div>
+
+	<section class="hero">
+		<h1>Welcome to Our Resorts and Hotels</h1>
+	</section>
+	<section class="destinations">
+        <h2>Welcome to Our Resorts and Hotels</h2>
+        <div class="destination">
+          <img src="images/resorts&hotel/sample1.jpg" alt="Destination 1">
+          <h3>New York</h3>
+          <div class="destination-details">
+            <p>New York, USA - A bustling city with iconic landmarks and world-class museums.</p>
+            <ul>
+              <li>Population:8,420,000</li>
+              <br>
+              <li>Language: English</li>
+              <br>
+              <li>Currency: USD</li>
+            </ul>
+          </div>
+        </div>
+        <div class="destination">
+          <img src="images/resorts&hotel/sample2.jpg" alt="Destination 2">
+          <h3>Paris</h3>
+          <div class="destination-details">
+            <p>Paris, France - The City of Light, famous for its art, fashion, and romance.</p>
+            <ul>
+              <li>Population:2,161,000</li>
+              <br>
+              <li>Language: French</li>
+              <br>
+              <li>Currency: EUR</li>
+            </ul>
+          </div>
+        </div>
+        <div class="destination">
+          <img src="images/resorts&hotel/sample3.jpg" alt="Destination 3">
+          <h3>Tokyo</h3>
+          <div class="destination-details">
+            <p>Tokyo, Japan - A vibrant city with a unique blend of traditional and modern culture.</p>
+            <ul>
+              <li>Population:13,979,000</li>
+              <br>
+              <li>Language: Japanese</li>
+              <br>
+              <li>Currency: JPY</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    <div class="lightbox">
+        <div class="lightbox-content">
+          <img src="" alt="" class="lightbox-image">
+          <p class="lightbox-details"></p>
+          <button class="lightbox-close">Close</button>
+        </div>
+      </div>
+		</div>
+	</div>
+	<script>
+		// Select elements
+const lightbox = document.querySelector('.lightbox');
+const lightboxContent = document.querySelector('.lightbox-content');
+const lightboxImage = document.querySelector('.lightbox-image');
+const lightboxDetails = document.querySelector('.lightbox-details');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+// Add event listeners to each image
+document.querySelectorAll('.destination img').forEach((img) => {
+  img.addEventListener('click', (e) => {
+    // Get the details from the data attribute
+    const details = img.getAttribute('data-details');
+
+    // Update the lightbox content
+    lightboxImage.src = img.src;
+    lightboxDetails.textContent = details;
+
+    // Show the lightbox
+    lightbox.classList.add('show');
+  });
+});
+
+// Add event listener to the close button
+lightboxClose.addEventListener('click', () => {
+  lightbox.classList.remove('show');
+});
+
+// Select elements
+const destinations = document.querySelectorAll('.destination');
+
+// Show details for each destination
+destinations.forEach((destination) => {
+  const image = destination.querySelector('img');
+  const details = destination.querySelector('.destination-details');
+
+  // Show the details
+  details.classList.add('show');
+});
+	</script>
+
+</body>
+</html>

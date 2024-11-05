@@ -1,0 +1,203 @@
+  /* Reset and Body Styling */
+  body {
+    margin: 0;
+    padding: 0;
+    background: url(../QPTO-SYSTEM/images/background/bgfeedback.jpg);
+    height: 100vh;
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(255, 117, 24, 0.9);
+    color: #fff;
+    font-size: 30px;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  h1:hover {
+    background-color: rgb(255, 117, 24, 0.7);
+  }
+
+  .feedback {
+    width: 40%;
+    height: 60%;
+    margin: auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: fixed;
+    bottom: 10%;
+    left: 27%;
+  
+  }
+
+  .feedback:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .form-group {
+    margin: 20px 0;
+  }
+
+  .form-group label {
+    margin-right: 20px;
+    font-weight: bold;
+  }
+
+  .form-group input,
+  .inputTextarea {
+    border: 2px solid #333;
+    border-radius: 5px;
+    width: calc(100% - 42px);
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .inputTextarea:focus {
+    border-color: #ff6425;
+  }
+
+  .inputTextarea {
+    height: 100px;
+    resize: none;
+  }
+
+  .wrapper button {
+    display: block;
+    margin: 30px auto;
+    width: 40%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff6425;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.6s ease, transform 0.3s ease;
+  }
+
+  .wrapper button:hover {
+    background-color: orangered;
+    transform: scale(1.1);
+  }
+
+  .main{
+  overflow: hidden;
+  position: fixed;
+  background-color: rgb(255, 117, 24, 0.9);
+  top: 0;
+  width: 100vw;
+  height: 8vh;
+  max-width: 1600px;
+  z-index: 1000;
+}
+
+ul{
+  list-style-type: none;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+ul li{
+  display: inline;
+}
+
+.list{
+  position: fixed;
+  display: block;
+  top: 9px;
+  float: left;
+}
+
+.list li.logo img{
+  position: relative;
+  float: left;
+  top: -20px;
+  margin-left: -5%;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+
+}
+.search{
+  display: inline;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.search input[type=text]{
+  position: relative;
+  float: left;
+  top:-18px;
+  left: 5%;
+  padding: 6px;
+  font-size: 15px;
+  border-radius: 15px;
+  border: 1px solid #0000ff;
+  transition: 0.6s ease;
+}
+
+.search input[type=text]:hover{
+  background-color: #dcdcdc;
+}
+
+
+.list input[type=image]{
+  position: relative;
+  float: right;
+  top:-50px;
+  left: 2%;
+  margin-left: 20%; 
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid #00f;
+  transition: 0.6s ease;
+  background-color: #fff;
+}
+
+.list input[type=image]:hover{
+  background-color: #739ac5;
+}
+
+.list2{
+  position: relative;
+  top: -20px;
+  float: right;
+}
+
+.list2 li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  border: 1px solid transparent;
+  transition: 0.9s ease;
+}
+
+.list2 li a:hover{
+  background-color: #fff;
+  color: #000;
+
+}
+
+.list2 li.active-menu a{
+  background-color: #fff;
+  color: #000;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/destination.css">
+	<title>Destinations</title>
+	<style type="text/css">
+
+.container .box .name-text input {
+  position: relative;
+  display: none;
+  border: 1px solid #fff;
+  top: -20px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.6s ease;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 25px;
+  outline: none;
+}
+
+.container .box:hover .name-text input {
+  display: block;
+}
+
+.container .box .name-text input:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn, .btn1, .btn2, .btn3, .btn4, .btn5 {
+  display: inline-block;
+  padding: 10px 30px;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover, .btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover, .btn5:hover {
+  background-color: wheat;
+  transform: translateY(-5px);
+}
+
+.btn1 {
+  margin: 0 -2px;
+}
+
+.btn2 {
+  padding: 10px 60px;
+}
+
+.btn3 {
+  padding: 10px 37px;
+  margin: 0 -2px;
+}
+
+.btn4 {
+  padding: 10px 50px;
+}
+
+.btn5 {
+  padding: 10px 25px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1450px;
+  margin: 70px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.container .box {
+  width: 320px;
+  height: 270px;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.container .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.container .box .imgBox {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.container .box .imgBox img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.container .box:hover .imgBox img {
+  transform: scale(1.2);
+}
+
+.container .box .name-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: opacity 0.6s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+	</style>
+</head>
+<body>
+	<h1 class="heading">Popular Destinations</h1>
+	<div class="main">
+        <ul>
+          <ul class="list">
+            <li class="logo"><a href="mainPage.html"><img src="earth-globe.png" alt="Logo" style="width: 45px; height: 45px;"></a></li>
+            <div class="search">
+            <div class="search">
+	            <form method="POST" action="info.php">
+	              <input type="text" name="search_p" placeholder="Search.." size="50">
+	          
+	              <input type="image" name="submit_p" src="search_icon.png" alt="Search image" style="width:22;height:22; margin-left:40px;">
+	            </form>
+          	</div>
+          </ul>
+          <ul class="list2">
+            <li><a href="mainPage.html">Home</a></li>
+            <li class="active-menu"><a id="long" href="destination.html">Destination</a></li>
+			<li><a href="resort-hotel.html">Resorts & Hotels</a></li>
+            <li><a href="booking.html">Booking</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="index.html">Logout</a></li>
+          </ul>
+        </ul>
+    </div>
+	<div class="container">
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//Tiaong1.jpg" alt="Tiaong Image" style="width: auto;height: 270px;">
+			</div>
+			<div class="name-text name-pading1 top1">
+				<h1>Tiaong</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="tiaong" class="btn1" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//lucbanKNH1.jpg" alt="Lucban Image" style="width: auto;height: 270px;">
+			</div>
+			<div class="name-text name-pading2 top1">
+				<h1>Lucban</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="lucbanKNH1" class="btn" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//LucenaPark1.jpg" alt="Lucena Image">
+			</div>
+			<div class="name-text name-pading3 top1">
+				<h1>Lucena</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="lucenapark1" class="btn" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//LucbanPF1.jpg" alt="Lucban Image">
+			</div>
+			<div class="name-text name-pading4 top1">
+				<h1>Lucban</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="lucbanpf1" class="btn" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//pagbilao1.jpg" alt="Pagbilao Image">
+			</div>
+			<div class="name-text name-pading5 top2">
+				<h1>Pagbilao</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="pagbilaos1" class="btn5" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//cagbalete1.jpg" alt="Mauban Image">
+			</div>
+			<div class="name-text name-pading6 top2">
+				<h1>Mauban</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="maubanc1" class="btn2" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//realb1.jpg" alt="Real Image">
+			</div>
+			<div class="name-text name-pading7 top2">
+				<h1>Real</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="realb1" class="btn3" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//tayabasksp1.jpg" alt="Tayabas Image">
+			</div>
+			<div class="name-text name-pading8 top2">
+				<h1>Tayabas</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="tayabasksp1" class="btn2" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//sariayasf1.jpg" alt="Sariaya Image">
+			</div>
+			<div class="name-text name-pading9 top3">
+				<h1>Sariaya</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="sariayasf1" class="btn3" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//padreburgosb1.jpg" alt="Padre Burgos Image">
+			</div>
+			<div class="name-text name-pading10 top3">
+				<h1>Padre Burgos</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="padreburgosb1" class="btn4" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//sanandresa1.jpg" alt="San Andres Image">
+			</div>
+			<div class="name-text name-pading11 top3">
+				<h1>San Andres</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="sanandresa1" class="btn4" value="Visit">
+				</form>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="images//destination//atimonanbm1.jpg" alt="Atimonan Image">
+			</div>
+			<div class="name-text name-pading12 top3">
+				<h1>Atimonan</h1>
+				<form method="POST" action="info.php">
+					<input type="submit" name="atimonanbm1" class="btn2" value="Visit">
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
